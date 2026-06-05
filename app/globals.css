@@ -1,0 +1,127 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Core */
+  --background: #F9F9F9;
+  --foreground: #111111;
+
+  /* Surface */
+  --card: #FFFFFF;
+  --card-foreground: #111111;
+  --popover: #FFFFFF;
+  --popover-foreground: #111111;
+
+  /* Brand Primary */
+  --primary: #111111;
+  --primary-foreground: #F9F9F9;
+
+  /* Secondary */
+  --secondary: #F2F2F7;
+  --secondary-foreground: #111111;
+
+  /* State */
+  --muted: #8E8E93;
+  --muted-foreground: #8E8E93;
+  --destructive: #FF3B30;
+  --destructive-foreground: #FFFFFF;
+  --accent: #F2F2F7;
+  --accent-foreground: #111111;
+
+  /* Border & Input */
+  --border: #E5E5EA;
+  --input: #E5E5EA;
+  --ring: #111111;
+
+  /* Radius */
+  --radius: 0.75rem;
+  --radius-sm: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+
+  /* Category Colors */
+  --cat-clothing-bg: #E8EEF4;
+  --cat-clothing-text: #3A5A7C;
+  --cat-goods-bg: #EEF0E8;
+  --cat-goods-text: #5A6340;
+  --cat-book-bg: #F4EDE8;
+  --cat-book-text: #7C5A3A;
+  --cat-furniture-bg: #EDE8F4;
+  --cat-furniture-text: #5A3A7C;
+  --cat-electronics-bg: #E8F0EE;
+  --cat-electronics-text: #3A6358;
+  --cat-etc-bg: #F0EFE8;
+  --cat-etc-text: #6E6452;
+
+  /* Typography Scale */
+  --text-display: 1.75rem;
+  --text-heading-1: 1.25rem;
+  --text-heading-2: 1rem;
+  --text-body-1: 1rem;
+  --text-body-2: 0.9375rem;
+  --text-label: 1rem;
+  --text-caption: 0.75rem;
+  --text-counter: 0.8125rem;
+}
+
+.dark {
+  --background: #111111;
+  --foreground: #F9F9F9;
+  --card: #1C1C1E;
+  --card-foreground: #F9F9F9;
+  --popover: #1C1C1E;
+  --popover-foreground: #F9F9F9;
+  --primary: #F9F9F9;
+  --primary-foreground: #111111;
+  --secondary: #2C2C2E;
+  --secondary-foreground: #F9F9F9;
+  --muted: #8E8E93;
+  --muted-foreground: #8E8E93;
+  --accent: #2C2C2E;
+  --accent-foreground: #F9F9F9;
+  --border: #3A3A3C;
+  --input: #3A3A3C;
+  --ring: #F9F9F9;
+}
+
+@theme inline {
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: calc(var(--radius-lg) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
